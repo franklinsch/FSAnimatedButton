@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		255648201C661267004C0A9D /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2556481F1C661267004C0A9D /* ColorExtensions.swift */; };
-		2566E6491C66163D0085447F /* StrokeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566E6481C66163D0085447F /* StrokeAnimator.swift */; };
 		259851381C65452A00A85F4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259851371C65452A00A85F4E /* AppDelegate.swift */; };
 		2598513A1C65452A00A85F4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259851391C65452A00A85F4E /* ViewController.swift */; };
 		2598513D1C65452A00A85F4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2598513B1C65452A00A85F4E /* Main.storyboard */; };
@@ -19,7 +18,6 @@
 
 /* Begin PBXFileReference section */
 		2556481F1C661267004C0A9D /* ColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
-		2566E6481C66163D0085447F /* StrokeAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeAnimator.swift; sourceTree = "<group>"; };
 		259851341C65452A00A85F4E /* FSAnimatedButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSAnimatedButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		259851371C65452A00A85F4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		259851391C65452A00A85F4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 				259851391C65452A00A85F4E /* ViewController.swift */,
 				259851491C65456A00A85F4E /* FSAnimatedButton.swift */,
 				2556481F1C661267004C0A9D /* ColorExtensions.swift */,
-				2566E6481C66163D0085447F /* StrokeAnimator.swift */,
 				2598513B1C65452A00A85F4E /* Main.storyboard */,
 				2598513E1C65452A00A85F4E /* Assets.xcassets */,
 				259851401C65452A00A85F4E /* LaunchScreen.storyboard */,
@@ -145,7 +142,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2598513A1C65452A00A85F4E /* ViewController.swift in Sources */,
-				2566E6491C66163D0085447F /* StrokeAnimator.swift in Sources */,
 				2598514A1C65456A00A85F4E /* FSAnimatedButton.swift in Sources */,
 				259851381C65452A00A85F4E /* AppDelegate.swift in Sources */,
 				255648201C661267004C0A9D /* ColorExtensions.swift in Sources */,

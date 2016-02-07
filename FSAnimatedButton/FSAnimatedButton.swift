@@ -11,9 +11,10 @@ import UIKit
 @IBDesignable
 class FSAnimatedButton: UIButton {
     
-    @IBInspectable var cornerRadius: Float = 5 {
+    @IBInspectable var cornerRadius: Float = 2 {
         didSet {
             layer.cornerRadius = CGFloat(cornerRadius)
+//            layer.masksToBounds = cornerRadius > 0
         }
     }
     
@@ -32,8 +33,10 @@ class FSAnimatedButton: UIButton {
     let bottomStroke = (start: CGFloat(0.5), end: CGFloat(1.0))
     
     private func setupBorders() {
+        let borderPath = UIBezierPath(roundedRect: CGRectMake(0, 0, layer.frame.size.width, layer.frame.size.height), cornerRadius: CGFloat(self.cornerRadius)).CGPath
         topBorderLayer = CAShapeLayer(layer: layer)
-        topBorderLayer.path = UIBezierPath(roundedRect: CGRectMake(0, 0, layer.frame.size.width, layer.frame.size.height), cornerRadius: 4).CGPath
+        topBorderLayer.path = borderPath
+        
         topBorderLayer.fillColor = UIColor.clearColor().CGColor
         topBorderLayer.strokeColor = self.backgroundColor?.darkerColor(0.2).CGColor
         topBorderLayer.lineWidth = borderStrokeWidth
@@ -41,7 +44,8 @@ class FSAnimatedButton: UIButton {
         layer.addSublayer(topBorderLayer)
         
         bottomBorderLayer = CAShapeLayer(layer: layer)
-        bottomBorderLayer.path = UIBezierPath(roundedRect: CGRectMake(0, 0, layer.frame.size.width, layer.frame.size.height), cornerRadius: 4).CGPath
+        bottomBorderLayer.path = borderPath
+        
         bottomBorderLayer.fillColor = UIColor.clearColor().CGColor
         bottomBorderLayer.strokeColor = self.backgroundColor?.darkerColor(0.2).CGColor
         bottomBorderLayer.lineWidth = borderStrokeWidth
@@ -96,7 +100,6 @@ class FSAnimatedButton: UIButton {
     
     override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
         if self.borderAnimationFinished {
-            print("here")
             performBorderUndrawing()
         }
         isTouchUp = true
